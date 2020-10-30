@@ -1,0 +1,44 @@
+.application__title {
+    padding-top: 102px;
+    font-size: 36px;
+    text-align: center;
+  }
+  .application__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .application__select {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 580px;
+    padding: 25px 0 25px 25px;
+    border-radius: 41px;
+    outline: none;
+    border: 1px solid #999;
+  }
+  .application__description {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 580px;
+    padding: 25px 0 0 25px;
+    border-radius: 31px;
+    resize: none;
+    outline: none;
+    height: 135px;
+    border: 1px solid #999;
+  }
+  .application__button {
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 580px;
+    padding: 25px 0 25px 25px;
+    border-radius: 41px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background: linear-gradient(0deg, #61ba6d 0%, #88cf2d 100%);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }

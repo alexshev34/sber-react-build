@@ -1,0 +1,58 @@
+.portfolio__title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 110px;
+  }
+  .portfolio__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio__name {
+    width: 100%;
+    max-width: 590px;
+    padding: 20px 0 22px 15px;
+    border-radius: 31px;
+    border: 1px solid #999;
+    outline: none;
+    margin-top: 90px;
+  }
+  .portfolio__description {
+    width: 100%;
+    max-width: 590px;
+    padding: 20px 0 0 15px;
+    height: 132px;
+    border-radius: 31px;
+    resize: none;
+    outline: none;
+    margin-top: 38px;
+  }
+  .portfolio__file {
+    display: none;
+  }
+  .portfolio__label {
+    width: 100%;
+    max-width: 590px;
+    border-radius: 31px;
+    border: 1px solid #999;
+    padding: 20px 0 20px 22px;
+    margin-top: 40px;
+    background-color: #e9faeb;
+    cursor: pointer;
+  }
+  .portfolio__button {
+    margin-top: 42px;
+    width: 100%;
+    max-width: 590px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 31px;
+    border: none;
+    padding: 20px 0 25px;
+    background: linear-gradient(0deg, #61ba6d 0%, #88cf2d 100%);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
+    outline: none;
+    cursor: pointer;
+  }

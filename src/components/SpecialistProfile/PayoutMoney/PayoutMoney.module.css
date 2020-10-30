@@ -1,0 +1,59 @@
+.withdrawal__container {
+    max-width: 590px;
+    margin: 0 auto;
+  }
+  .withdrawal__title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .withdrawal__form {
+    max-width: 590px;
+    margin: 0 auto;
+  }
+  .withdrawal__sum {
+    margin-top: 100px;
+    width: 100%;
+    max-width: 590px;
+    border-radius: 31px;
+    outline: none;
+    border: 1px solid #999;
+    padding: 20px 0 25px 20px;
+  }
+  .withdrawal__variant {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 63px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  .withdrawal__label {
+    font-size: 22px;
+    padding-left: 30px;
+  }
+  .withdrawal__card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  .withdrawal__card-column {
+    color: #4b9f56;
+  }
+  .withdrawal__card-comission {
+    font-weight: 400;
+  }
+  .withdrawal__submit {
+    width: 100%;
+    max-width: 590px;
+    background: linear-gradient(0deg, #61ba6d 0%, #88cf2d 100%);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 23px 0 20px;
+    border-radius: 31px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
