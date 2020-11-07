@@ -10,16 +10,20 @@ export const useHttp = () => {
             if(body) {
                 body = JSON.stringify(body)
                 headers['Content-Type'] = 'application/json'
+                // alert(response.headers.get("Authorization"));
             }
           const response = await fetch(url, { method, body, headers})
           const data = await response.json()
 
           if(!response.ok){
-              throw new Error(data.message || 'Что-то пошло не так')  //обработка из бэка
+              throw new Error(data.message || 'Что-то пошло не так')  
+          }
+          if(response.ok){
+            alert(response.headers.get("Authorization"));
+            // console.log(response.headers.get("Authorization"));
           }
 
           setLoading(false)
-
           return data  //прилетает с сервера
 
         } catch (e){
@@ -28,7 +32,6 @@ export const useHttp = () => {
             throw e
         }
     }, [])
-
     const clearError = () => setError(null)
 
     return {loading, request, error, clearError}

@@ -15,7 +15,6 @@ import PortfolioEdit from './components/SpecialistProfile/SpecialistPortfolio/Po
 import SpecialistReviews from './components/SpecialistProfile/SpecialistReviews/SpecialistReviews';
 import PayoutMoney from './components/SpecialistProfile/PayoutMoney/PayoutMoney';
 import Arbitration from './components/SpecialistProfile/Arbitration/Arbitration';
-import Testing from './components/Testing/Testing';
 
 const useRoutes = isAuthenticated => {
     if(isAuthenticated){
@@ -46,6 +45,25 @@ const useRoutes = isAuthenticated => {
             <MainPage/>
             <Footer/>
         </>
+    //      <>
+    //      <HeaderCustomer/>
+    //      <Switch>
+    //          <Route exact path="/" render={() => <SpecialistProfile/>}/>
+    //          <Route exact path="/settings" render={() => <Dashboard/>}/>
+    //          <Route exact path="/message" render={() => <MessageCustomer/>}/>
+    //          <Route exact path="/my-orders" render={() => <SpecialistOrders/>}/>
+    //          <Route exact path="/logout" render={() => <Logout/>}/>
+    //          <Route exact path="/profile" render={() => <SpecialistProfile/>}/>
+    //          <Route exact path="/my-history" render={() => <HistoryMoney/>}/>
+    //          <Route exact path="/portfolio" render={() => <SpecialistPortfolio/>}/>
+    //          <Route exact path="/portfolio-add" render={() => <PortfolioEdit/>}/>
+    //          <Route exact path="/my-reviews" render={() => <SpecialistReviews/>}/>
+    //          <Route exact path="/payout-money" render={() => <PayoutMoney/>}/>
+    //          <Route exact path="/arbitration" render={() => <Arbitration/>}/>
+    //      </Switch>
+    //      <Footer/>
+    //  </>
+        
     )
 }
 

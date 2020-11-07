@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import './Login.css';
 import '../../css/main.css';
-import useRoutes from "../../routes";
 import { useState } from "react";
 import { useHttp } from "../../hooks/http.hook";
 import { useContext } from "react";
@@ -9,36 +8,33 @@ import { AuthContext } from "../../context/AuthContext";
 
 
 
+
 const Login = () => {
 const auth = useContext(AuthContext)
 const {loading, request} = useHttp()
 const [form, setForm] = useState({
-  email: '',
+  login: '',
   password: ''
 })
 
 const changeHandler = event => {
   setForm({...form, [event.target.name]: event.target.value})
 }
-//осуществление запроса на сервер
 
-// const registerHandler = async () => {
-//   try{
-//     const data = await request ('/api/auth/register', 'POST', {...form}) //данные которые передаются с сервера
-//   }
-//  catch (e) {
-
-//  }
-// }
 const loginHandler = async () => {
+  alert("Testing3");
   try{
-    const data = await request ('/api/auth/register', 'POST', {...form}) //данные которые передаются с сервера
-    auth.login(data.token, data.userId)
+    const data = await request ('http://79.174.13.220:8080/login', 'POST', {...form}) //данные которые передаются с сервера
+    // auth.login(data.token)
+    alert("Testing1");
   }
  catch (e) {
 
- }
 }
+
+alert("Testing2");
+}
+
 
   return (
     <>
@@ -66,9 +62,9 @@ const loginHandler = async () => {
           <p className="login__title">Войти:</p>
           <form className="login__form">
             <input className="login__input"
-              id="email"
-              type="email"
-              name="email"
+              id="login"
+              type="text"
+              name="login"
               placeholder="e-mail"
               onChange={changeHandler}
               disabled={loading}/>
@@ -86,7 +82,7 @@ const loginHandler = async () => {
             <button className="login__button login__btn-1"
               type="submit" disabled={loading} onClick={loginHandler}
             >Войти как заказчик</button>
-            <button onCLick={useRoutes(true)} className="login__button login__btn-2">Войти как исполнитель</button>
+            {/* <button onCLick={useRoutes(true)} className="login__button login__btn-2">Войти как исполнитель</button> */}
           </form>
           <ul className="login__list">
             <li className="login__item">
