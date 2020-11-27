@@ -1,0 +1,80 @@
+.money {
+    margin-top: 102px;
+  }
+  .money__wrapper {
+    display: flex;
+  }
+  .money__container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .money__balance {
+    width: 100%;
+    max-width: 165px;
+    margin-left: auto;
+    height: 62px;
+    border: 1px solid #999;
+    border-radius: 25px;
+  }
+  .money__withdraw {
+    width: 100%;
+    max-width: 165px;
+    height: 62px;
+    border: 1px solid #999;
+    border-radius: 25px;
+    margin-left: 30px;
+    text-align: center;
+  }
+  .money__title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 72px;
+  }
+  .money__form {
+    margin-top: 80px;
+    display: flex;
+  }
+  .money__select {
+    width: 100%;
+    max-width: 458px;
+    border-radius: 31px;
+    height: 65px;
+    outline: none;
+    margin-right: 30px;
+  }
+  .money__date {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 31px;
+    border: 1px solid #999;
+    outline: none;
+    margin-right: 30px;
+  }
+  .money__button {
+    width: 100%;
+    max-width: 262px;
+    background: linear-gradient(0deg, #61ba6d 0%, #88cf2d 100%);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 31px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .balance__link {
+    padding-top: 17px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .withdraw__link {
+    padding-top: 24px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+  }

@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Registration.module.css';
 import '../../css/main.css';
 import { useState } from 'react';
-import { useHttp } from '../../hooks/http.hook';
+import { useHttp } from '../../hooks/http.hook2';
 
 const Registration = () => {
     const {loading, request} = useHttp()
@@ -20,10 +20,17 @@ const Registration = () => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = async () => {
-        alert(values.username + values.usersurname + values.login + values.tel + values.country + values.city + values.password)
+    const handleSubmitExecutor = async () => {
         try {
             const data = await request ('http://79.174.13.220:8080/users/sign-up-specialist', 'POST', { ...values }) //данные которые передаются с сервера
+        }
+        catch (e) {
+
+        }
+    }
+    const handleSubmitCustomer= async () => {
+        try {
+            const data = await request ('http://79.174.13.220:8080/users/sign-up-client', 'POST', { ...values }) //данные которые передаются с сервера
         }
         catch (e) {
 
@@ -69,7 +76,8 @@ const Registration = () => {
                             <input className={s.mail__check} type="checkbox" />
                             <label>Получать уведомления о заказах на электронную почту</label>
                         </div>
-                        <button className={s.mail__button} type="submit" onClick={handleSubmit}>Зарегистрироваться</button>
+                        <button className={s.mail__button} type="submit" onClick={handleSubmitExecutor}>Зарегистрироваться как Исполнитель</button>
+                        <button className={s.mail__button2} type="submit" onClick={handleSubmitCustomer}>Зарегистрироваться как Заказчик</button>
                     </form>
                     <p className={s.mail__info}>Нажимая кнопку «Зарегистрироваться», я соглашаюсь с правилами сайта<br /> и даю согласие на обработку персональных данных</p>
                 </div>

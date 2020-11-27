@@ -1,5 +1,5 @@
 import React from "react";
-import {Switch, Route} from "react-router-dom";
+import {Switch, Route, Redirect} from "react-router-dom";
 import Login from "../Login/Login";
 import RegCreateOrder from "../RegCreateOrder/RegCreateOrder";
 import Registration from "../Registration/Registration";
@@ -12,6 +12,7 @@ const MainPage = () => {
                 <Route exact path="/" render={() => <Main/>}/>
                 <Route exact path="/login" render={() => <Login/>}/>
                 <Route path="/registration" render={() => <Registration/>}/>
+                <Redirect to="/" />
             </Switch>
 
     )

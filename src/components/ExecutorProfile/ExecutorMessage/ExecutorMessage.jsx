@@ -1,7 +1,10 @@
 import React from 'react';
-import s from './MessageCustomer.module.css';
+import s from './ExecutorMessage.module.css';
+import '../../../css/main.css';
+import '../../../css/normalize.css';
 
-const MessageCustomer = () => {
+
+const ExecutorMessage = () => {
     return(
         <section className={s.message}>
             <div className={s.message__container}>
@@ -28,4 +31,4 @@ const MessageCustomer = () => {
     );
 }
 
-export default MessageCustomer;
+export default ExecutorMessage;

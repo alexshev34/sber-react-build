@@ -1,10 +1,10 @@
 import { useState, useCallback } from "react"
 
-export const useHttp = () => {
-    const [loading, setLoading] = useState(false) //процесс загрузки
+export const useHttp2 = () => {
+    const [loading2, setLoading] = useState(false) //процесс загрузки
     const [error, setError] = useState(false) //потенциальные ошибки если есть
 
-    const request = useCallback(async (url, method = 'GET', body = null, headers = {}) => {
+    const request2 = useCallback(async (url, method = 'GET', body = null, headers = {}) => {
         setLoading(true)
         try {
             if (body) {
@@ -29,14 +29,14 @@ export const useHttp = () => {
                         .then(resJson => resJson['userDataId'])
                         .then(userId => {
                             async function testing2() { 
-                            let testing2 = await fetch('http://79.174.13.220:8080/api/userDatas/' + userId + '/specialist');
+                            let testing2 = await fetch('http://79.174.13.220:8080/api/userDatas/' + userId + '/client');
                             if(testing2.ok){
-                                let specialist = response.headers.get('Authorization'); //получение токена
-                                localStorage.setItem("specialist", specialist);
+                                let client = response.headers.get('Authorization'); //получение токена
+                                localStorage.setItem("client", client);
                                 document.location.href = "http://localhost:3000/profile"; //редирект при успешном входе
                             }
                             else{
-                                alert("Вы не исполнитель");
+                                alert("Вы не заказчик");
                             }
                         }
                         testing2();
@@ -60,5 +60,5 @@ export const useHttp = () => {
     }, [])
     const clearError = () => setError(null)
 
-    return { loading, request, error, clearError }
+    return { loading2, request2, error, clearError }
 }

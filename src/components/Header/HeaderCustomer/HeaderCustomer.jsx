@@ -28,6 +28,7 @@ class HeaderCustomer extends Component {
         <li className={s.header__item}><NavLink to="/my-reviews">Мои отзывы</NavLink></li>
         <li className={s.header__item}><NavLink to="/payout-money">Вывод средств</NavLink></li>
         <li className={s.header__item}><NavLink to="/arbitration">Заявка в арбитраж</NavLink></li>
+        <li className={s.header__item}><NavLink to="/all-order">Все заказы</NavLink></li>
         </ul>;
       }
     return(
@@ -50,10 +51,9 @@ class HeaderCustomer extends Component {
                     </nav>
                     <div className={s['header-authorization']}>
                         <NavLink to="/logout" className={s.logout}>Выход</NavLink>
-                        <button className={s['specialist-info']} onClick={this.toggleState.bind(this)}>Исполнитель: ИВАН ИВАНОВ
+                        <button className={s['specialist-info']} onClick={this.toggleState.bind(this)}>Исполнитель
                         </button>
-                        {dropdownText}
-                        
+                        {dropdownText}  
                     </div>
                 </div>
             </div>
