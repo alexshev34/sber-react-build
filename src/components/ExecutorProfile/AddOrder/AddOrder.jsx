@@ -2,28 +2,31 @@ import React, { useState } from 'react';
 import s from './AddOrder.module.css';
 import '../../../css/main.css';
 import '../../../css/normalize.css';
-import { useHttp } from '../../../hooks/http.hook2';
+import { useHttp } from '../../../hooks/http.hookAddorder';
 
 
 const AddOrder = () => {
     const {loading, request} = useHttp()
-    const [values, setValues] = useState({
-        selectOrder: '',
-        nameOrder: '',
-        descriptionOrder: '',
-        costOrder: '',
-        colDay: ''
+    const [form, setForm] = useState({
+        category: '',
+        title: '',
+        description: '',
+        cost: '',
+        numberOfDays: ''
     })
 
     const orderHandler = e => {
-        setValues({ ...values, [e.target.name]: e.target.value})
+        setForm({ ...form, [e.target.name]: e.target.value})
     }
 
-    const handleOrderExecutor = async () => {
+    const handleOrderExecutor = async (e) => {
         try{
+            e.preventDefault();
+            const data = await request ('http://79.174.13.220:8080/orders/publish-order', 'POST', { ...form })
+        }
+        catch (e) {
 
         }
-        catch (e) {}
     }
     return(
         <section className={s.form}>
@@ -31,7 +34,7 @@ const AddOrder = () => {
                 <p className={s.form__title}>Создать новый заказ</p>
                 <div className={s.container__form}>
                     <form className={s.feedback}>
-                        <select value={values.selectOrder} onChange={orderHandler} className={s.form__select}>
+                        <select name="category" id="category" onChange={orderHandler} disabled={loading} className={s.form__select}>
                             <option disabled>Выбор услуги</option>
                             <option value="Аренда">Аренда</option>
                             <option value="Ремонт и строительство">Ремонт и строительство</option>
@@ -46,10 +49,10 @@ const AddOrder = () => {
                             <option value="Юристы">Юристы</option>
                             <option value="Тренеры">Тренеры</option>
                         </select>
-                        <input className={s.form__order} type="text" name="order" value={values.nameOrder} onChange={orderHandler} placeholder="Название заказа:"/>
-                        <textarea className={s.form__info} name="description" value={values.descriptionOrder} onChange={orderHandler} placeholder="Описание заказа:"></textarea>
-                        <input className={s.form__cost} type="text" name="cost" value={values.costOrder} onChange={orderHandler} placeholder="Стоимость заказа*"/>
-                        <input className={s.form__day} type="text" name="day" value={values.colDay} onChange={orderHandler} placeholder="Количество дней на исполнение:"/>
+                        <input className={s.form__order} type="text" name="title" id="title" disabled={loading} onChange={orderHandler} placeholder="Название заказа:"/>
+                        <textarea className={s.form__info} name="description" id="description" disabled={loading} onChange={orderHandler} placeholder="Описание заказа:"></textarea>
+                        <input className={s.form__cost} type="text" name="cost" id="cost" disabled={loading} onChange={orderHandler} placeholder="Стоимость заказа*"/>
+                        <input className={s.form__day} type="text" name="numberOfDays" id="numberOfDays" disabled={loading} onChange={orderHandler} placeholder="Количество дней на исполнение:"/>
                         <button className={s.form__submit} type="submit" onClick={handleOrderExecutor}>Создать новый заказ</button>
                     </form>
                 </div>

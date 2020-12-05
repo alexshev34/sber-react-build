@@ -45,7 +45,6 @@ const useRoutes = isAuthenticated => {
             </Switch>
             <Footer/>
         </>
-        
         );
     }
     if(localStorage.getItem('specialist')){

@@ -114,3 +114,6 @@
     outline: none;
     cursor: pointer;
   }
+  .execution__order{
+    text-align: center;
+  }

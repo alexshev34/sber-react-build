@@ -16,20 +16,23 @@ const Registration = () => {
         dateOfBirth: ''
     })
 
+
     const registerHandler = e => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
 
-    const handleSubmitExecutor = async () => {
+    const handleSubmitExecutor = async (e) => {
         try {
+            e.preventDefault();
             const data = await request ('http://79.174.13.220:8080/users/sign-up-specialist', 'POST', { ...values }) //данные которые передаются с сервера
         }
         catch (e) {
 
         }
     }
-    const handleSubmitCustomer= async () => {
+    const handleSubmitCustomer= async (e) => {
         try {
+            e.preventDefault();
             const data = await request ('http://79.174.13.220:8080/users/sign-up-client', 'POST', { ...values }) //данные которые передаются с сервера
         }
         catch (e) {
