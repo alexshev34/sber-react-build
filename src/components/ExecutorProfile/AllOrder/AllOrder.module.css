@@ -56,26 +56,27 @@
     padding: 0 10px;
   }
   .execution__box {
-      display: block;
-      position: relative;
-      padding-top: 4rem;
-      padding-left: 15px;
+      display: flex;
+      /* position: relative; */
+      /* padding-top: 4rem; */
+      /* padding-left: 15px; */
       border-bottom: 5px solid #eee;
   }
   .platnoe {
       background-color:#e9faeb;
   }
-  .execution__info {
-     float:left;
+  .execution__container {
+    max-width: 1170px;
+    margin: 0 auto;
   }
-  
-  
+  .execution__box {
+    display: flex;
+    margin-top: 80px;
+    border-bottom: 5px solid #eee;
+  }
   .execution__info:nth-child(1) {
     margin-right: 128px;
   }
-  
-  
-  
   .execution__list {
     display: flex;
   }
@@ -83,10 +84,10 @@
     color: green;
   }
   .execution__services:not(:last-child) {
-    margin-right: 2.5rem;
+    margin-right: 48px;
   }
   .execution__name {
-    font-size: 1.2rem;
+    font-size: 24px;
     font-weight: bold;
   }
   .execution__name span {
@@ -96,20 +97,15 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-bottom: 2.2rem;
+    margin-bottom: 40px;
   }
   .execution__description {
-    margin-top: 3rem;
-    margin-bottom: 2.2rem;
+    margin-top: 53px;
+    margin-bottom: 40px;
     max-width: 765px;
   }
   .execution__user {
-    margin-bottom: 4rem;
-  }
-  .execution__user img {
-    height: 4rem;
-    border-radius: 50%;
-    border: 2px solid #6c6;
+    margin-bottom: 62px;
   }
   .execution__link {
     color: green;
@@ -120,22 +116,18 @@
     border-radius: 10px;
     display: block;
     border: 1px solid #999;
-    padding: 20px 11px;
+    padding: 22px 67px 22px 67px;
     color: green;
     width: 100%;
     max-width: 262px;
     outline: none;
     cursor: pointer;
-    background-color: #fff;
   }
-  .execution__button:hover {
-    background-color: #f7f7f7;
+  .execution__order{
+    text-align: center;
   }
-  .execution__button-1 {
-    margin-bottom: 40px;
-  }
-  .execution__info:nth-child(2) a{
-      display:block!important;
+  .execution__participants{
+    text-align: center;
   }
   a {
     text-decoration: none;
