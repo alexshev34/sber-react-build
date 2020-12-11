@@ -71,6 +71,9 @@
     outline: none;
     cursor: pointer;
   }
+  .execution__button:active{
+      background-color: red;
+  }
   .execution__order{
     text-align: center;
   }

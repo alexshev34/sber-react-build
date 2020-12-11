@@ -6,28 +6,7 @@ import Orders from './Orders/Orders';
 // import f from '../../../css/base.module.css';
 
 class AllOrder extends React.Component{
-	constructor(props){
-		super(props);
-		this.state = { 
-			col: 0,
-			data2: {},
-			isFetching: true,
-            error: null,
-            showModal: false
-		}
-	}
-	componentDidMount(){
-		fetch('http://79.174.13.220:8080/api/orderEntities')
-			.then(res => res.json())
-			.then(res2Json => this.setState({col:1, data2: res2Json, isFetching: false}))
-    }
-    handleModal = () => {
-        this.setState({showModal: !this.state.showModal})
-        // return <div>Testing</div>
-    }
-	render(){
-		const {col, data2, isFetching, error } = this.state;
-		if (isFetching) return <div>...Loading</div>;
+	render(){	
 return(
     <>
         <section className={s.orders}>
@@ -60,7 +39,6 @@ return(
             </div>
         </section>
 		<Orders/>
-            {/* <Modal  /> */}
     </>
 );
 

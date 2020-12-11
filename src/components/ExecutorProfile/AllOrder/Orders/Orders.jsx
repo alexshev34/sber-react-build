@@ -4,11 +4,33 @@ import Modal from './Modal/Modal';
 
 
 class Orders extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            col: 0,
+            data2: {},
+            isFetching: true,
+            error: null,
+            showModal: false
+        }
+    }
+    componentDidMount(){
+		fetch('http://79.174.13.220:8080/api/orderEntities')
+			.then(res => res.json())
+			.then(res2Json => this.setState({col:1, data2: res2Json, isFetching: false}))
+    }
+    handleModal = () => {
+        this.setState({showModal: !this.state.showModal})
+    }
+    render(){
+		const {col, data2, isFetching, error } = this.state;
+		if (isFetching) return <div>...Loading</div>;
     return(
         <section className={s.execution}>
                 {col ? data2["_embedded"]["orderEntities"].map((item, index) => (
                     <div className={s.execution__container}>
-                        <div className={s.execution__box}>
+                        <div key={item.id} className={s.execution__box}>
                             <div className={s.execution__info}>
                                 <div className={s.execution__list}>
                                     <p className={s.execution__services}>Услуга:</p>
@@ -20,8 +42,7 @@ class Orders extends React.Component {
                                 <p className={s.execution__user}>Заказчик:  <a href="#" className="execution__link"></a> <img src="https://s8.********************/uploads/images/2020/11/6ef562d4767cba575a5ac931c26e6bdb.png" alt="" /></p>
                             </div>
                             <div className={s.execution__info}>
-                                <img className={s.execution__img} src="https://s8.********************/uploads/images/2020/11/830b09a113baebf4d6272d86719a2bde.png" alt="" />
-                                <button id={index} onClick={this.handleModal} className={s.execution__button}>откликнуться</button>
+                                <button id={index} className={s.execution__button}>откликнуться</button>
                                 {this.state.showModal && <Modal handleModal={this.handleModal} /> }
 								<p className={s.execution__participants}>0 участников</p>
                             </div>
@@ -33,5 +54,5 @@ class Orders extends React.Component {
             </section>
     )
 }
-
+}
 export default Orders
