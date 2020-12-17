@@ -33,7 +33,7 @@ export const useHttp = () => {
                             if(testing2.ok){
                                 let specialist = response.headers.get('Authorization'); //получение токена
                                 localStorage.setItem("specialist", specialist);
-                                document.location.href = "http://localhost:3000/profile"; //редирект при успешном входе
+                                document.location.href = "http://your-services.surge.sh"; //редирект при успешном входе
                             }
                             else{
                                 alert("Вы не исполнитель");

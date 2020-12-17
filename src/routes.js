@@ -39,6 +39,7 @@ const useRoutes = isAuthenticated => {
                 <Route exact path="/my-orders" render={() => <ExecutorOrders/>}/>
                 <Route exact path="/my-message" render={() => <ExecutorMessage/>}/>
                 <Route exact path="/logout" render={() => <LogoutExecutor/>}/>
+                <Route exact path="/logout?#" render={() => <Logout/>}/>
                 <Route exact path="/my-history" render={() => <HistoryExecutor/>}/>
                 <Route exact path="/settings" render={() => <SettingsExecutorProfile/>}/>
                 <Route exact path="/deposit-money" render={() => <DepositMoney/>}/>
@@ -59,6 +60,7 @@ const useRoutes = isAuthenticated => {
                 <Route exact path="/message" render={() => <MessageCustomer/>}/>
                 <Route exact path="/my-orders" render={() => <SpecialistOrders/>}/>
                 <Route exact path="/logout" render={() => <Logout/>}/>
+                <Route exact path="/logout?#" render={() => <Logout/>}/>
                 <Route exact path="/profile" render={() => <SpecialistProfile/>}/>
                 <Route exact path="/my-history" render={() => <HistoryMoney/>}/>
                 <Route exact path="/portfolio" render={() => <SpecialistPortfolio/>}/>

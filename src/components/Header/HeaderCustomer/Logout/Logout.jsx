@@ -5,7 +5,7 @@ const Logout = () => {
 	
 	const logouthandler = () =>{
 		localStorage.clear();
-		document.location.href="http://localhost:3000/";
+		document.location.href="http://your-services.surge.sh";
 	}
 
     return(
