@@ -9,8 +9,9 @@ const ExecutorMessage = () => {
         <section className={s.message}>
             <div className={s.message__container}>
                 <h2 className={s.message__title}>Мои сообщения</h2>
+                <p>У Вас пока нет сообщений</p>
                 <div className={s.message__box}>
-                    <div className={s.message__photo}>
+                    {/* <div className={s.message__photo}>
                         <img src="https://s8.hostingkartinok.com/uploads/images/2020/10/2cd770e2091fd5ddc28fe77fcf3954b5.png" alt=""/>
                         <div className={s.message__online}>онлайн</div>
                     </div>
@@ -24,7 +25,7 @@ const ExecutorMessage = () => {
                     <div className={s.message__col}>
                         <p className={s.message__all}>Всего сообщений: <span>7</span></p>
                         <p className={s.message__last}>Последнее: <span>21:30 21.09.2020</span></p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 	    </section>

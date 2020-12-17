@@ -10,7 +10,7 @@ const LogoutExecutor = () => {
     return(
     <section className={s.form}>
 		<form action="#" className={s.form__authorization}>
-			<button className={s.form__login}>Войти как исполнитель</button>
+			{/* <button className={s.form__login}>Войти как исполнитель</button> */}
 			<button className={s.form__logout} onClick={logouthandler}>Выход</button>
 		</form>
 	</section>

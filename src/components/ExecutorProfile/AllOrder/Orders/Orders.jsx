@@ -19,6 +19,7 @@ class Orders extends React.Component {
 			.then(res => res.json())
 			.then(res2Json => this.setState({col:1, data2: res2Json, isFetching: false}))
     }
+   
     render(){
 		const {col, data2, isFetching, error } = this.state;
 		if (isFetching) return <div>...Loading</div>;

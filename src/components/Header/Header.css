@@ -28,6 +28,7 @@
   }
   .header-navigation {
     margin-left: 100px;
+    visibility: hidden;
   }
   .header-navigation__list {
     display: flex;

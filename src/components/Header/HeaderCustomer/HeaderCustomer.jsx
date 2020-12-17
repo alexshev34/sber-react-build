@@ -44,9 +44,9 @@ class HeaderCustomer extends Component {
                             <li className={s['site-navigation__item']}>
                                 <NavLink to="/my-orders" className={s['site-navigation__link']}>Мои заказы</NavLink>
                             </li>
-                            <li className={s['site-navigation__item']}>
+                            {/* <li className={s['site-navigation__item']}>
                                 <a className={s['site-navigation__link']}>Разместить объявление</a>
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
                     <div className={s['header-authorization']}>

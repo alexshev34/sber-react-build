@@ -14,8 +14,6 @@ const SpecialistReviews = () => {
                             <input className={s.orders__input} type="text" placeholder="Поиск заказа"/>
                             <button className={s.orders__button} type="submit">Найти</button>
                         </div>
-                        <input className={s.orders__check} type="checkbox"/>
-                        <label for="#">Поиск по имени заказчика</label>
                     </form>
                     <ul className={s.orders__menu}>
                         <li className={s.orders__item}>
@@ -34,7 +32,8 @@ const SpecialistReviews = () => {
                 </div>
             </section>
             <section className={s.execution}>
-                <div className={s.execution__container}>
+                <p className={s.center}>У Вас пока нет отзывов</p>
+                {/* <div className={s.execution__container}>
                     <div className={s.execution__box}>
                         <div className={s.execution__info}>
                             <div className={s.execution__list}>
@@ -50,7 +49,7 @@ const SpecialistReviews = () => {
                             <img className={s.execution__img} src="https://s8.hostingkartinok.com/uploads/images/2020/10/ef4054321bfdd001205449b7657e1148.png" alt=""/>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </>
     );

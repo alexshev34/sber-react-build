@@ -27,9 +27,9 @@ class HeaderExecutor extends Component {
           <li className={s.header__item}><NavLink to="/settings">Настройки аккаунта</NavLink></li>
           <li className={s.header__item}><NavLink to="/my-reviews">Мои отзывы</NavLink></li>
           <li className={s.header__item}><NavLink to="/deposit-money">Пополнить баланс</NavLink></li>
-          <li className={s.header__item}><NavLink to="/arbitration">Заявка в арбитраж</NavLink></li>
+          {/* <li className={s.header__item}><NavLink to="/arbitration">Заявка в арбитраж</NavLink></li>
           <li className={s.header__item}><NavLink to="/all-order">Все заказы</NavLink></li>
-          <li className={s.header__item}><NavLink to="/catalog">Каталог услуг</NavLink></li>
+          <li className={s.header__item}><NavLink to="/catalog">Каталог услуг</NavLink></li> */}
           </ul>;
         }
     return(

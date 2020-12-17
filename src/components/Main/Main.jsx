@@ -16,10 +16,10 @@ const Main = () => {
 							<p className="preview__text">Быстрый сервис по поиску специалистов в любой жизненной ситуацмм</p>
 							<div className="preview__inner">
 								<div className="preview__button">
-									<NavLink to="/create-order" className="preview__link1">Разместить заказ</NavLink>
+									{/* <NavLink to="/create-order" className="preview__link1">Разместить заказ</NavLink> */}
 								</div>
 								<div className="preview__button">
-									<NavLink to="/registration" className="preview__link2">Стать исполнителем</NavLink>
+									{/* <NavLink to="/registration" className="preview__link2">Стать исполнителем</NavLink> */}
 								</div>
 							</div>
 						</div>

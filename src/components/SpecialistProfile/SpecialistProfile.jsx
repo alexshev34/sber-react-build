@@ -43,16 +43,16 @@ class SpecialistProfile extends React.Component {
                     </div>
                     <div className={s.executor__info}>
                         <p className={s.executor__user}>{data['firstname']+ ' ' + data['lastname']}</p>
-                        <p className={s.executor__status}>Статус: <span>Начинающий</span></p>
+                        <p className={s.executor__status}>Статус: <span> Начинающий</span></p>
                         <p className={s.executor__rating}>Рейтинг: <span>0</span></p>
-                        <p className={s.executor__city}>Город: <span>Екатеринбург</span></p>
+                        <p className={s.executor__city}>Страна: <span>Россия</span></p>
                         <p className={s.executor__registration}>Зарегистрирован на сайте: <span>0 месяца</span></p>
                         <p className={s.executor__done}>Выполненных заказов: <span>0</span></p>
                         <p className={s.executor__rewiews}>Отзывы: <span>0</span>|<span>0</span>|<span>0</span></p>
                     </div>
                 </div>
                 <div className={s.history}>
-                    <h2 className={s.history__title}>Информация обо мне</h2>
+                    {/* <h2 className={s.history__title}>Информация обо мне</h2>
                     <div className={s.history__block}>
                         <p className={s.history__age}>Возраст: <span>25 лет</span> </p>
                         <p className={s.history__country}>Страна: <span>Россия</span> </p>
@@ -80,13 +80,13 @@ class SpecialistProfile extends React.Component {
                     <div className={s.history__education}>
                         <p className={s['history__my-education']}>Мое образование:</p>
                         <p className={s['history__my-info']}>Квалификация: бакалавр, специальность: прикладная информатика, уч. заведение: УрФУ</p>
-                    </div>
+                    </div> */}
                     <div className={s.history__btn, s.history__right}>
                         <NavLink to="/portfolio" className={s.history__portfolio}>Портфолио</NavLink>
                     </div>
-                    <div className={s.history__btn}>
+                    {/* <div className={s.history__btn}>
                         <a href="#" className={s.history__recommend}>Рекомендованные мной</a>
-                    </div>
+                    </div> */}
                     <div className={s.reviews}></div>
                 </div>
             </div>

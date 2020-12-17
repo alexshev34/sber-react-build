@@ -14,8 +14,6 @@ const ReviewsExecutor = () => {
                             <input className={s.orders__input} type="text" placeholder="Поиск заказа"/>
                             <button className={s.orders__button} type="submit">Найти</button>
                         </div>
-                        <input className={s.orders__check} type="checkbox"/>
-                        <label for="">Поиск по имени заказчика</label>
                     </form>
                     <ul className={s.orders__menu}>
                         <li className={s.orders__item}>
@@ -33,7 +31,7 @@ const ReviewsExecutor = () => {
                     </ul>
                 </div>
 	        </section>
-            <section className={s.execution}>
+            {/* <section className={s.execution}>
                 <div className={s.execution__container}>
                     <div className={s.execution__box}>
                         <div className={s.execution__info}>
@@ -51,7 +49,7 @@ const ReviewsExecutor = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 }

@@ -4,64 +4,6 @@ import '../../../css/main.css';
 import '../../../css/normalize.css';
 
 class ExecutorOrders extends React.Component{
-// const ExecutorOrders = () => {
-    //    let col;
-    //     let res4;
-    // const [ col, setCol ] = useState(0);
-    // const [ res4, setRes4 ] = useState({
-    // });
-
-    // useEffect(() => {
-
-    // async function test(){
-    //     let response3 =  await fetch('http://79.174.13.220:8080/users/get-current-user', {
-    //     method: 'GET',
-    //     headers: {
-    //         'Authorization': localStorage.getItem('tokens')
-    //     }
-    // })
-    //     let res = await response3.json()
-
-    //     let resJson = await res['userDataId']
-    //     let userId = await fetch('http://79.174.13.220:8080/api/userDatas/' + resJson + '/client' ,  {
-    //         method: 'GET',
-    //         headers: {
-    //             'Authorization': localStorage.getItem('tokens')
-    //         }
-    // })
-    //     let res3 = await userId.json()
-
-    //     let result = res3["_links"]["self"]["href"]; // получить ссылку
-    //     let unique = result.split('/');
-    //     let id = unique[unique.length-1];
-
-    //     let response4 = await fetch('http://79.174.13.220:8080/api/orderEntities/search/findByOwnerId?id=' + id, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Authorization': localStorage.getItem('tokens')
-    //         }
-    //     })
-
-    
-
-
-    //  let res4 = await response4.json() //получение JSON
-    //  let cod = res4["_embedded"]["orderEntities"].length; // получение количества id  
-    //  let array = res4["_embedded"]["orderEntities"][1]["title"]
-    // let array = res4["_embedded"];
-    // alert(res4["_embedded"]["orderEntities"][1]["title"]); 
-
-    // setRes4(await response4.json());
-    // alert(res4["_embedded"]["orderEntities"][0]["title"]);
-
-    // setCol(res4["_embedded"]["orderEntities"].length);
-    // setRes4(array);
-    // setCol(cod);
-
-    // }
-    // test()
-    // });
-
     constructor(props){
         super(props);
         this.state = {
@@ -105,11 +47,6 @@ class ExecutorOrders extends React.Component{
                         
                 });
             }
-                
-                
-                   
-            
-        
 render(){
     const {col, data1, isFetching, error} = this.state;
     if (isFetching) return <div>...Loading</div>;
@@ -119,12 +56,12 @@ render(){
             <section className={s.orders}>
                 <div className={s.orders__container}>
                     <h2 className={s.orders__title}>Мои заказы</h2>
-                    <form action="#" className={s.orders__form}>
+                    {/* <form action="#" className={s.orders__form}>
                         <div className={s.orders__flex}>
                             <input className={s.orders__input} type="text" placeholder="Поиск заказа" />
                             <button className={s.orders__button} type="submit">Найти</button>
                         </div>
-                    </form>
+                    </form> */}
                     <ul className={s.orders__menu}>
                         <li className={s.orders__item}>
                             <a className={s.orders__link} href="#">В конкурсе</a>
@@ -154,7 +91,7 @@ render(){
                             <div className={s.execution__info}>
                                 <div className={s.execution__list}>
                                     <p className={s.execution__services}>Услуга:</p>
-                                    <p className={s.execution__services}>Срок исполнения: до 30.09.2020</p>
+                                    <p className={s.execution__services}>Срок исполнения: до {item.dueDate.substr(0,10)}</p>
                                     <p className={s.execution__services}>Стоимость: {item.cost} Р</p>
                                 </div>
                                 <p className={s.execution__name}>Название: <span>{item.title}</span></p>

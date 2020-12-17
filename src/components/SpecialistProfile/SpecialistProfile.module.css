@@ -29,6 +29,9 @@
     margin-left: 55px;
     font-size: 20px;
   }
+  .executor__info p{
+    margin-right: 10px;
+  }
   .executor__info span {
     color: green;
   }

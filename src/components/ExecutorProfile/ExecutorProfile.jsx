@@ -46,7 +46,7 @@ class ExecutorProfile extends React.Component {
 						<p className={s.executor__status}>Статус: <span>Начинающий</span></p>
 						<p className={s.executor__rating}>Телефон: <span>{data['telephoneNumber']}</span></p>
 						<p className={s.executor__rating}>Рейтинг: <span>0</span></p>
-						<p className={s.executor__city}>Город: <span>Москва</span></p>
+						<p className={s.executor__city}>Страна: <span>Россия</span></p>
 						<p className={s.executor__registration}>Зарегистрирован на сайте: <span>0 месяца</span></p>
 						<p className={s.executor__done}>Выполненных заказов: <span>0</span></p>
 						<p className={s.executor__rewiews}>Отзывы: <span>0</span>|<span>0</span>|<span>0</span></p>
@@ -56,8 +56,8 @@ class ExecutorProfile extends React.Component {
 					<h2 className={s.history__title}>Информация обо мне</h2>
 					<div className={s.history__wrapper}>
 						<div className={s.history__column}>
-							<p className={s.history__age}>Возраст: <span>18 лет</span> </p>
-							<p className={s.history__country}>Страна: <span>Россия</span> </p>
+							{/* <p className={s.history__age}>Возраст: <span>18 лет</span> </p> */}
+							{/* <p className={s.history__country}>Страна: <span>Россия</span> </p> */}
 							<button className={s.history__button} type="submit">Новый заказ</button>
 						</div>
 						<div className={s.history__column}>

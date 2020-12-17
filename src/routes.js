@@ -33,6 +33,7 @@ const useRoutes = isAuthenticated => {
            <>
             <HeaderExecutor/>
             <Switch>
+                <Route exact path="/" render={() => <ExecutorProfile/>}/>
                 <Route exact path="/profile" render={() => <ExecutorProfile/>}/>
                 <Route exact path="/new-order" render={() => <AddOrder/>}/>
                 <Route exact path="/my-orders" render={() => <ExecutorOrders/>}/>
@@ -42,6 +43,7 @@ const useRoutes = isAuthenticated => {
                 <Route exact path="/settings" render={() => <SettingsExecutorProfile/>}/>
                 <Route exact path="/deposit-money" render={() => <DepositMoney/>}/>
                 <Route exact path="/my-reviews" render={() => <ReviewsExecutor/>}/>
+                <Redirect to="/" />
             </Switch>
             <Footer/>
         </>

@@ -12,7 +12,7 @@ return(
         <section className={s.orders}>
             <div className={s.orders__container}>
                 <h1 className={s.orders__title}>Все заказы</h1>
-                <form  className={s.orders__form}>
+                {/* <form  className={s.orders__form}>
                 
                 <input className={s.orders__input} type="date" placeholder="Срок до:" data-toggle="tooltip" title="" data-original-title="Срок до:"/>
                                     
@@ -35,7 +35,7 @@ return(
                     <br/>
                     <div className={s.orders__label}>
                     </div>
-                </form>
+                </form> */}
             </div>
         </section>
 		<Orders/>

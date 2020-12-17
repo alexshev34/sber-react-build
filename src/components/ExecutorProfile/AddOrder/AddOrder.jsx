@@ -35,7 +35,7 @@ const AddOrder = () => {
                 <div className={s.container__form}>
                     <form className={s.feedback}>
                         <select name="category" id="category" onChange={orderHandler} disabled={loading} className={s.form__select}>
-                            <option disabled>Выбор услуги</option>
+                            <option selected>Выбор услуги</option>
                             <option value="Аренда">Аренда</option>
                             <option value="Ремонт и строительство">Ремонт и строительство</option>
                             <option value="Ремонт и установка техники">Ремонт и установка техники</option>
