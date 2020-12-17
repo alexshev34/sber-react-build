@@ -1,0 +1,64 @@
+.execution__container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  .execution__box {
+    display: flex;
+    margin-top: 80px;
+    border-bottom: 5px solid #eee;
+  }
+  .execution__info:nth-child(1) {
+    margin-right: 128px;
+  }
+  .execution__list {
+    display: flex;
+  }
+  .execution__services {
+    color: green;
+  }
+  .execution__services:not(:last-child) {
+    margin-right: 48px;
+  }
+  .execution__name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .execution__name span {
+    font-weight: 500;
+  }
+  .execution__img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+  .execution__description {
+    margin-top: 53px;
+    margin-bottom: 40px;
+    max-width: 765px;
+  }
+  .execution__user {
+    margin-bottom: 62px;
+  }
+  .execution__link {
+    color: green;
+  }
+  .execution__button {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #999;
+    padding: 22px 67px 22px 67px;
+    color: green;
+    width: 100%;
+    max-width: 262px;
+    outline: none;
+    cursor: pointer;
+  }
+  .execution__order{
+    text-align: center;
+  }
+  .execution__participants{
+    text-align: center;
+  }

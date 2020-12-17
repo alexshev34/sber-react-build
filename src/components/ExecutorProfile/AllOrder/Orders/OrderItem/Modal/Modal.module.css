@@ -1,0 +1,18 @@
+.modal{
+}
+.modal__content{
+    background-color: black;
+    position: absolute;
+    left: 27%;
+    border-radius: 40px;
+}
+
+.modal__title{
+    color: #fff;
+    text-align: center;
+    font-size: 27px;
+}
+
+.modal__button{
+    margin: 0 auto;
+}
