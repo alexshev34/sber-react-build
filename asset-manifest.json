@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sber-react-build/static/css/main.80a3eb76.chunk.css",
+    "main.js": "/sber-react-build/static/js/main.d14c8180.chunk.js",
+    "main.js.map": "/sber-react-build/static/js/main.d14c8180.chunk.js.map",
+    "runtime-main.js": "/sber-react-build/static/js/runtime-main.0b8644a4.js",
+    "runtime-main.js.map": "/sber-react-build/static/js/runtime-main.0b8644a4.js.map",
+    "static/js/2.b6e22310.chunk.js": "/sber-react-build/static/js/2.b6e22310.chunk.js",
+    "static/js/2.b6e22310.chunk.js.map": "/sber-react-build/static/js/2.b6e22310.chunk.js.map",
+    "index.html": "/sber-react-build/index.html",
+    "precache-manifest.374219364f3179fd348854efc5121145.js": "/sber-react-build/precache-manifest.374219364f3179fd348854efc5121145.js",
+    "service-worker.js": "/sber-react-build/service-worker.js",
+    "static/css/main.80a3eb76.chunk.css.map": "/sber-react-build/static/css/main.80a3eb76.chunk.css.map",
+    "static/js/2.b6e22310.chunk.js.LICENSE.txt": "/sber-react-build/static/js/2.b6e22310.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/sber-react-build/static/media/MyriadPro-Regular.290905e4.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b8644a4.js",
+    "static/js/2.b6e22310.chunk.js",
+    "static/css/main.80a3eb76.chunk.css",
+    "static/js/main.d14c8180.chunk.js"
+  ]
+}
